@@ -4,8 +4,8 @@ export const getFuncionarios = async(req, res) => {
     try{
         const dbFuncionarios = await sql`select * from funcionarios`
 
-        console.log('dbFuncionarios',dbFuncionarios);
-        res.send('Recuperado todos os funcionários');
+
+        res.json({dados:dbFuncionarios});
     }
     catch (err) {
         res.send('Não foi possível recuperar os funcionários');

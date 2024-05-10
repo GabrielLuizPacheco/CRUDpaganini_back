@@ -67,10 +67,13 @@ export const registerFuncionario = async(req, res) => {
         `;
 
 
-        res.json({memsangem :"Funcionário criado com sucessso;" ,dados :dbFuncionario});
+        res.json({
+            memsangem: "Funcionário criado com sucessso;",
+            dados: dbFuncionario
+        });
     } catch (err) {
         console.log(err)
-        res.send('Não foi possível criar o Funcionário')
+        res.json({memsangem :"Não foi possível criar o Funcionário"});
     }
 
 }

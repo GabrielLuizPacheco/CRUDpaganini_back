@@ -8,9 +8,8 @@ export const getFuncionariosById = async (req, res) => {
                                         FROM funcionarios
                                         WHERE id = ${id}`
 
-        console.log('dbFuncionario', dbFuncionario);
 
-        res.send('Funcionário recuperado com sucesso');
+        res.json({dados:dbFuncionario});
     } catch (err) {
         res.send('Não foi possível resgatar o funcionário');
     }
