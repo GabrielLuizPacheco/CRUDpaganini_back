@@ -5,6 +5,8 @@ const app = express();
 
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(funcionarioController);
 
 app.listen(3000, (error) => {
