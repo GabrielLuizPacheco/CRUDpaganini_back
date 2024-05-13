@@ -2,7 +2,7 @@ import {sql} from "../libs/postgres.js"
 
 export const getFuncionarios = async(req, res) => {
     try{
-        const dbFuncionarios = await sql`select id, nome, idEmpresa, idFuncao, chapa from funcionarios`
+        const dbFuncionarios = await sql`select id, status, nome, idEmpresa, idFuncao, chapa from funcionarios`
 
         res.json({dados:dbFuncionarios});
     }
